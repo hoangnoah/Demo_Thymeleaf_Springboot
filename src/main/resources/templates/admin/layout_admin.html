@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+              rel="stylesheet"
+              integrity="sha384-EVSTQN3/azprG1Anm300gpJLTm9Nao@Yz1ztcQTwFspd3yD65VohhpuuCOmL.ASjC"
+              crossorigin="anonymous">
+    </head>
+<body>
+    <div class="d-flex flex-column min-vh-100">
+        <!-- Header -->
+        <header class="row">
+            <div class="col">
+                <div th:replace="~{admin/fragments/header::header}"></div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="container flex-grow-1">
+            <section class="row mt-4">
+                <div class="col mt-5 mb-5">
+                    <div layout:fragment="content"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="row mt-auto">
+            <div class="col">
+                <div th:replace="~{admin/fragments/footer::footer}"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JavaScript (phiên bản phù hợp với Bootstrap đang dùng) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
